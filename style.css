@@ -1,0 +1,104 @@
+/* Custom styles for Sistem Penjadwalan Bimbingan Skripsi */
+
+/* Body font and background enhancements */
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background: #f3f4f6; /* Tailwind gray-100 */
+}
+
+/* Form container shadow and border */
+form#bimbinganForm {
+  box-shadow: 0 8px 24px rgba(0, 51, 102, 0.15);
+  border: 1px solid #cbd5e1; /* Tailwind gray-300 */
+}
+
+/* Input and textarea focus with smooth transition and blue glow */
+input[type="text"],
+input[type="number"],
+input[type="email"],
+input[type="datetime-local"],
+select,
+textarea {
+  transition: box-shadow 0.3s ease, border-color 0.3s ease;
+}
+
+input[type="text"]:focus,
+input[type="number"]:focus,
+input[type="email"]:focus,
+input[type="datetime-local"]:focus,
+select:focus,
+textarea:focus {
+  outline: none;
+  border-color: #003366;
+  box-shadow: 0 0 8px rgba(0, 51, 102, 0.6);
+}
+
+/* Buttons with gradient background, shadow, and smooth hover */
+button[type="submit"] {
+  background: linear-gradient(135deg, #003366 0%, #00509e 100%);
+  box-shadow: 0 4px 12px rgba(0, 80, 158, 0.4);
+  transition: background 0.3s ease, box-shadow 0.3s ease;
+}
+
+button[type="submit"]:hover,
+button[type="submit"]:focus {
+  background: linear-gradient(135deg, #002244 0%, #003366 100%);
+  box-shadow: 0 6px 16px rgba(0, 51, 102, 0.6);
+  outline: none;
+}
+
+/* Reset button styling */
+button[type="reset"] {
+  background: #e2e8f0; /* Tailwind gray-300 */
+  box-shadow: 0 2px 8px rgba(160, 174, 192, 0.4);
+  transition: background 0.3s ease, box-shadow 0.3s ease;
+}
+
+button[type="reset"]:hover,
+button[type="reset"]:focus {
+  background: #cbd5e1; /* Tailwind gray-400 */
+  box-shadow: 0 4px 12px rgba(130, 146, 176, 0.6);
+  outline: none;
+}
+
+/* Error message fade-in and fade-out */
+p.text-red-600 {
+  transition: opacity 0.3s ease;
+}
+
+/* Responsive typography enhancements */
+h1 {
+  font-weight: 700;
+  letter-spacing: 0.05em;
+}
+
+p {
+  line-height: 1.6;
+}
+
+/* Subtle accent border for form fields */
+input,
+select,
+textarea {
+  border-radius: 0.375rem; /* 6px */
+}
+
+/* Add subtle focus ring for accessibility */
+input:focus-visible,
+select:focus-visible,
+textarea:focus-visible,
+button:focus-visible {
+  outline-offset: 2px;
+  outline: 2px solid #00509e;
+}
+
+/* Mobile friendly adjustments */
+@media (max-width: 640px) {
+  form#bimbinganForm {
+    padding: 1.5rem;
+  }
+
+  button {
+    width: 48%;
+  }
+}

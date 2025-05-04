@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Sistem Penjadwalan Bimbingan Skripsi</title>
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <!-- Custom styles -->
+  <link rel="stylesheet" href="assets/css/style.css" />
+</head>
+<body class="bg-gray-100 text-gray-900 min-h-screen flex flex-col">
+  <!-- Main container -->
+  <main class="flex-grow container mx-auto px-4 py-8 max-w-4xl">
+    <!-- Title -->
+    <h1 class="text-3xl font-bold text-[#003366] mb-2 text-center">
+      Sistem Penjadwalan Bimbingan Skripsi
+    </h1>
+    <!-- Description -->
+    <p class="text-center text-gray-700 mb-8">
+      Silakan isi form berikut untuk mengajukan jadwal bimbingan skripsi Anda.
+    </p>
+
+    <!-- Form container -->
+    <form id="bimbinganForm" class="bg-white p-6 rounded-lg shadow-md max-w-xl mx-auto space-y-6" novalidate>
+      <!-- Nama Lengkap -->
+      <div>
+        <label for="nama" class="block text-sm font-medium mb-1">Nama Lengkap<span class="text-red-600">*</span></label>
+        <input type="text" id="nama" name="nama" required
+          class="w-full border border-gray-300 rounded px-3 py-2 focus:outline-none focus:ring-2 focus:ring-[#003366] transition" />
+        <p class="mt-1 text-sm text-red-600 hidden" id="errorNama"></p>
+      </div>
+
+      <!-- NIM -->
+      <div>
+        <label for="nim" class="block text-sm font-medium mb-1">NIM<span class="text-red-600">*</span></label>
+        <input type="number" id="nim" name="nim" required
+          class="w-full border border-gray-300 rounded px-3 py-2 focus:outline-none focus:ring-2 focus:ring-[#003366] transition" />
+        <p class="mt-1 text-sm text-red-600 hidden" id="errorNim"></p>
+      </div>
+
+      <!-- Email Mahasiswa -->
+      <div>
+        <label for="email" class="block text-sm font-medium mb-1">Email Mahasiswa<span class="text-red-600">*</span></label>
+        <input type="email" id="email" name="email" required
+          class="w-full border border-gray-300 rounded px-3 py-2 focus:outline-none focus:ring-2 focus:ring-[#003366] transition" />
+        <p class="mt-1 text-sm text-red-600 hidden" id="errorEmail"></p>
+      </div>
+
+      <!-- Topik Skripsi -->
+      <div>
+        <label for="topik" class="block text-sm font-medium mb-1">Topik Skripsi<span class="text-red-600">*</span></label>
+        <textarea id="topik" name="topik" rows="3" required
+          class="w-full border border-gray-300 rounded px-3 py-2 focus:outline-none focus:ring-2 focus:ring-[#003366] transition resize-none"></textarea>
+        <p class="mt-1 text-sm text-red-600 hidden" id="errorTopik"></p>
+      </div>
+
+      <!-- Pilih Dosen Pembimbing -->
+      <div>
+        <label for="dosen" class="block text-sm font-medium mb-1">Pilih Dosen Pembimbing<span class="text-red-600">*</span></label>
+        <select id="dosen" name="dosen" required
+          class="w-full border border-gray-300 rounded px-3 py-2 focus:outline-none focus:ring-2 focus:ring-[#003366] transition">
+          <option value="" disabled selected>-- Pilih Dosen --</option>
+          <option value="Dr. Andi Wijaya">Dr. Andi Wijaya</option>
+          <option value="Prof. Siti Aminah">Prof. Siti Aminah</option>
+          <option value="Dr. Budi Santoso">Dr. Budi Santoso</option>
+          <option value="Dr. Rina Kartika">Dr. Rina Kartika</option>
+          <option value="Prof. Joko Prasetyo">Prof. Joko Prasetyo</option>
+        </select>
+        <p class="mt-1 text-sm text-red-600 hidden" id="errorDosen"></p>
+      </div>
+
+      <!-- Pilih Tanggal dan Waktu Bimbingan -->
+      <div>
+        <label for="tanggalWaktu" class="block text-sm font-medium mb-1">Pilih Tanggal dan Waktu Bimbingan<span class="text-red-600">*</span></label>
+        <input type="datetime-local" id="tanggalWaktu" name="tanggalWaktu" required
+          class="w-full border border-gray-300 rounded px-3 py-2 focus:outline-none focus:ring-2 focus:ring-[#003366] transition" />
+        <p class="mt-1 text-sm text-red-600 hidden" id="errorTanggalWaktu"></p>
+      </div>
+
+      <!-- Buttons -->
+      <div class="flex justify-between items-center">
+        <button type="submit"
+          class="bg-[#003366] text-white px-6 py-2 rounded shadow hover:bg-[#002244] transition duration-300 ease-in-out focus:outline-none focus:ring-2 focus:ring-[#001122]">
+          Submit
+        </button>
+        <button type="reset"
+          class="bg-gray-300 text-gray-700 px-6 py-2 rounded shadow hover:bg-gray-400 transition duration-300 ease-in-out focus:outline-none focus:ring-2 focus:ring-gray-500">
+          Reset
+        </button>
+      </div>
+    </form>
+  </main>
+
+  <!-- JavaScript -->
+  <script src="assets/js/app.js"></script>
+</body>
+</html>
