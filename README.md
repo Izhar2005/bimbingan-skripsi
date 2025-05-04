@@ -21,7 +21,7 @@ Website ini dibuat untuk membantu mahasiswa dalam menjadwalkan bimbingan skripsi
 ## 💡 Cara Menggunakan
 1. Clone repository ini:
    ```bash
-   git clone https://github.com/pana2005/sistem-penjadwalan-bimbingan.git
+   git clone https://github.com/izhar2005/sistem-penjadwalan-bimbingan.git
 Buka file index.html menggunakan browser.
 
 Isi form dan klik Submit.
